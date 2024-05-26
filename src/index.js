@@ -5,13 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Counter from './components/Counter'
 import CounterHeader from './components/CounterHeader';
+import CounterClassComponent from './components/CounterClassComponent';
+import TaskManager from './components/TaskManager';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CounterHeader name="Normal Counter" minValue="-9999999"/>
-    <CounterHeader name="Cart" minValue="0"/>
-    <CounterHeader name="Prime Numbers" minValue="2" maxValue="100"/>
+    {/* <CounterHeader name="Normal Counter" minValue="-9999999"/> */}
+    <TaskManager/>
+    {/* <CounterClassComponent/> */}
+    {/* <CounterHeader name="Cart" minValue="0"/>
+    <CounterHeader name="Prime Numbers" minValue="2" maxValue="100"/> */}
   </React.StrictMode>
 );
 
@@ -45,7 +49,6 @@ reportWebVitals();
 
 // firstNumber = 1
 // secondNumber = 1
-
 
 // Next number: first=1, second=1 --->first+second(1+1) = 2
 // PrevNumber : 

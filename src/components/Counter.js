@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import '../style/Counter.css'; // Ensure the path to the CSS file is correct
 
 
-
 export default function Counter(props) {
     const [count, setCount] = useState(0);
 
@@ -75,80 +74,19 @@ export default function Counter(props) {
 
     return (
 
-            <>
-            {x==5? loggedInView(): <h1>Not 4</h1>}
+        <div className="counter-container">
 
-            </>
+            <p>Counter min Value: {props.minValue}</p>
 
+            <div className="counter-display">Clicked Times: {count}</div>
+            <div className="button-container">
+                <button onClick={handleDecrement2} className="counter-button">-</button>
+                <button onClick={() => setCount(count + 1)} className="counter-button">+</button>
+            </div>
 
+            {ItemList()}
 
-
-
-
-            // <>
-            // {isLoggedin && loggedInView()}
-            // </>
-
-        // <div className="counter-container">
-
-
-
-
-
-
-        //     <p>Counter min Value: {props.minValue}</p>
-
-        //     <div className="counter-display">Clicked Times: {count}</div>
-        //     <div className="button-container">
-        //         <button onClick={handleDecrement2} className="counter-button">-</button>
-        //         <button onClick={() => setCount(count + 1)} className="counter-button">+</button>
-        //     </div>
-
-        //     {ItemList()}
-
-
-
-
-
-
-
-        // </div>
+        </div>
     );
 }
-
-
-// Solution 1: Fine solution for this use case
-// For i in 2-100
-//      checkPrime(i)
-
-
-
-// Optimal 
-
-// For i in range 0-len(prime):
-//      Get  prime[i]
-
-
-// prime = [2, 3, 5, 7, 11, 13, 17, 19, 23, ........ 100]
-
-// prime[0] = 2
-// prime[1] = 3
-// prime[2] = 5
-
-
-// Ternary Operator
-
-// if(x==5) {
-//     // do something
-
-// } else {
-//     // do something else
-// }
-
-
-
-// Ternary Operator
-
-// x==5 ? doSomething() : doSomethingElse();
-// condition ? true action : false action
 
